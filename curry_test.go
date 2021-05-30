@@ -43,8 +43,7 @@ func TestFunc(t *testing.T) {
 		var a float64 = 0
 
 		partial, _ := cross(a)
-		partial, _ = partial(b)
-		_, out := partial(c)
+		_, out := partial(b, c)
 
 		if out == nil || len(out) != 2 {
 			t.Fail()
